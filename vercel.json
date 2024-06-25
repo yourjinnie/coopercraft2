@@ -1,0 +1,13 @@
+{
+    "builds": [{
+        "src": "coopcraft/wsgi.py",
+        "use": "@vercel/vercel-python-wsgi",
+        "config": { "maxLambdaSize": "15mb" , "runtime": "python3.12.1"  }
+    }],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "coopcraft/wsgi.py"
+        }
+    ]
+}
