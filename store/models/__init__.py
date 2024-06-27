@@ -1,1 +1,2 @@
-from store.models.product_detail import Product
+from store.models.products import Product
+from store.models.category import Category

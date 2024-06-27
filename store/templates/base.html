@@ -393,6 +393,7 @@
 		</div>
 	</header>
 	<!-- END HEADER -->
+
 {% block content %}
 {% endblock %}
 	<!-- START FOOTER -->
@@ -558,20 +559,18 @@
 			opacity: 1;
 		}
 	</style>
-	<button class="open-button mchatbtn" onclick="openForm()"><img src="aichat.png" /></button>
-	<!--
+	<button class="open-button mchatbtn" onclick="openForm()"><img src="/static/assets/images/aichat.png" /></button>
 <div class="chat-popup" id="myForm">
   <form action="/action_page.html" class="mform-container">
     <h6>Chat</h6>
-
-    <label for="msg"><b>Message</b></label>
-    <textarea placeholder="Type message.." name="msg" required></textarea>
+<!--for="msg"-->
+    <label ><b>Message</b></label>
+    <textarea placeholder="Type message." name="msg" required></textarea>
 
     <button type="submit" class="mbtn">Send</button>
     <button type="button" class="mbtn cancel" onclick="closeForm()">Close</button>
   </form>
 </div>
--->
 	<a href="#" class="scrollup" style="display: none;"><i class="ion-ios-arrow-up"></i></a>
 
 	<script src="/static/https://code.jquery.com/jquery-3.6.0.min.js"></script>
