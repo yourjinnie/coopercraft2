@@ -1,5 +1,7 @@
 from django.contrib import admin
 # from store import views
+from django.conf import settings
+from django.conf.urls.static import static
 from django.urls import path
 from store.views.index import Index
 from store.views.about import About
@@ -56,3 +58,5 @@ urlpatterns = [
     path('wooden-craft/', WoodenCraft.as_view(),name='wooden-craft'),
     path('zari-zardozi/', ZariZardozi.as_view(),name='zari-zardozi'),
 ]
+if settings.DEBUG:
+    urlpatterns+= static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

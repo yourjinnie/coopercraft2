@@ -1,8 +1,26 @@
 {% extends 'base.html' %}
 {% block content %}
-
+<div class="row">
+    <div class="col-lg-12">
+        <div id="owl-carousel" class="owl-carousel nav_style1 owl-theme">
+            {% for category in categories %}
+            <div class="item">
+                <a href="/?category={{category.id}}">
+                    <div class="collection_banner">
+                        <img src="{{category.image.url}}" alt="shop_banner_img1"/>
+                        <h3 class="collection_title">{{category}}</h3>
+                    </div>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
 
 {% endblock %}
+
+
+
 
 
 

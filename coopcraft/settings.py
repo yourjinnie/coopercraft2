@@ -55,7 +55,7 @@ ROOT_URLCONF = 'coopcraft.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR,'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -124,9 +124,14 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Added Manually
-import os
-# STATICFILES_DIRS=[
-#     BASE_DIR,'static'
-# ]
-STATICFILES_DIRS=os.path.join(BASE_DIR,'static'),
-STATIC_ROOT=os.path.join(BASE_DIR,'staticfiles_build','static')
+# import os
+STATICFILES_DIRS=[
+    BASE_DIR,'static'
+]
+
+# STATICFILES_DIRS=os.path.join(BASE_DIR,'static'),
+# STATIC_ROOT=os.path.join(BASE_DIR,'staticfiles_build','static')
+MEDIA_ROOT=BASE_DIR
+MEDIA_URL="/media/"
+
+
